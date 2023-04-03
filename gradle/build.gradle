@@ -1,0 +1,11 @@
+plugins {
+    id "groovy"
+    id "maven-publish"
+    id "zhupff.gadget.gradle.JitpackPublish"
+}
+
+GadgetScript.dependsGadgetGradle(project)
+
+dependencies {
+    compileOnly gradleApi()
+}

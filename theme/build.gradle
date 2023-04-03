@@ -1,0 +1,24 @@
+plugins {
+    id "com.android.library"
+    id "org.jetbrains.kotlin.android"
+    id "zhupff.gadget.gradle.JitpackPublish"
+}
+
+android {
+    compileSdk GadgetVer.compileSdk
+    defaultConfig {
+        minSdk GadgetVer.minSdk
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+dependencies {
+    implementation "androidx.appcompat:appcompat:${GadgetVer.android.appCompat}"
+    implementation "com.google.android.material:material:${GadgetVer.android.material}"
+}
